@@ -30,8 +30,8 @@ mainText = "In a 2010 interview, David Heyman briefly explained the book-to-film
            "from that moment on, she sort of trusted me."
 
 
-n, sentences = dissect.get_sentences(mainText)
-print(n, "------", sentences)
+l, sentences = dissect.get_sentences(mainText)
+print(l, "------", sentences, '\n')
 
 sent_scores = []
 
@@ -39,11 +39,18 @@ for sent in sentences:
     words_list = dissect.remove_stopwords(sent)
     #print(words_list)
 
-    score = ws.word_frequency(words_list)
-    #print(score)
+    score = ws.word_frequency(words_list) + \
+            ws.tf_idf(l, words_list, sentences) + \
+            ws.upper_case(words_list) + \
+            ws.proper_noun(words_list) + \
+            ws.lexical_similarity(words_list) + \
+            ws.n_gram(words_list)
 
     sent_scores.append(score)
-    #print('\n')
 
-print(sent_scores)
+print(sent_scores, '\n')
+
+max_score = max(sent_scores)
+print("--------------------Summarised sentence--------------------")
+print(sentences[sent_scores.index(max_score)])
 
