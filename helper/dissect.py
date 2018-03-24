@@ -21,3 +21,4 @@ def remove_stopwords(sentence):
     filtered_list = [w for w in words_list if not w in stop_words]
 
     return filtered_list
+
