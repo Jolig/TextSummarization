@@ -50,7 +50,5 @@ for sent in sentences:
 
 print(sent_scores, '\n')
 
-max_score = max(sent_scores)
-print("--------------------Summarised sentence--------------------")
-print(sentences[sent_scores.index(max_score)])
+dissect.print_summarized_sentence(sent_scores, sentences)
 

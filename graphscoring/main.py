@@ -39,6 +39,5 @@ S = text_rank.get_similarity_matrix(sentences)
 sent_scores = text_rank.get_ranks(S)
 print("sent_scores: ", sent_scores, '\n')
 
-max_score = max(sent_scores)
-print("--------------------Summarised sentence--------------------")
-print(sentences[sent_scores.tolist().index(max_score)])
+dissect.print_summarized_sentence(sent_scores.tolist(), sentences)
+

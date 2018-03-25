@@ -10,7 +10,6 @@ def get_sentences(anytext):
     return len(sent_text), sent_text
 
 
-
 def remove_stopwords(sentence):
     words_list = word_tokenize(sentence)
     stop_words = stopwords.words('english')
@@ -21,4 +20,10 @@ def remove_stopwords(sentence):
     filtered_list = [w for w in words_list if not w in stop_words]
 
     return filtered_list
+
+
+def print_summarized_sentence(sent_scores, sentences):
+    max_score = max(sent_scores)
+    print("--------------------Summarised sentence--------------------")
+    print(sentences[sent_scores.index(max_score)])
 
