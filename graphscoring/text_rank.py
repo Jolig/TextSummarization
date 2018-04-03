@@ -19,7 +19,6 @@ def get_ranks(S, lam=0.0005, damping=0.80):
 
 
 def cosine_similarity(sent1, sent2):
-
     sent1 = [w.lower() for w in sent1]
     sent2 = [w.lower() for w in sent2]
 

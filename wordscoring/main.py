@@ -40,7 +40,7 @@ for sent in sentences:
     #print(words_list)
 
     score = ws.word_frequency(words_list) + \
-            ws.tf_idf(l, words_list, sentences) + \
+            ws.tf_df(l, words_list, sentences) + \
             ws.upper_case(words_list) + \
             ws.proper_noun(words_list) + \
             ws.lexical_similarity(words_list) + \

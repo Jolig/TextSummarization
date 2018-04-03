@@ -17,7 +17,7 @@ def word_frequency(words_list):
     return score
 
 
-def tf_idf(l, words_list, sentences_list):
+def tf_df(l, words_list, sentences_list):
     score = 0
     df = 0
 
@@ -62,7 +62,7 @@ def n_gram(words_list):
     for i in range(2, n+1):
         pos = 0
 
-        for word in words_list[:l - i + 1]:
+        for word in words_list[:l - i + 1]:# +1 since that would be exclusive
             ngram_list.append(words_list[pos:pos + i])
             #print(words_list[pos:pos + i])
             pos = pos + 1
