@@ -43,5 +43,5 @@ Steps to run the Project:
       - After few iterations our train.csv would be very efficient so that it can be used to create a linear regression model that predicts with more accuracy.
 
       - Whenever new data comes, we can directly run
-            4-5-1)helper/preprocessing.py
-            4-5-2)wordscoring/main.py
+            - helper/preprocessing.py
+            - wordscoring/main.py
