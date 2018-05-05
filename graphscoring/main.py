@@ -1,7 +1,10 @@
+"""
+    Mainly performs textrank
+    Author - Deepti
+"""
 from helper import dissect
 from graphscoring import text_rank
 
-import pandas as pd
 import itertools
 
 
@@ -9,8 +12,16 @@ summarized_list = []
 labels_list = []
 
 
-def summarize(mainText):
-    sentences = dissect.get_sentences(mainText)
+def summarize(maintext):
+    """
+        summarizes the given text using PageRank and appends all the summaries to summarized_list (globally declared list)
+
+        :param maintext     :   Each document data
+
+        :return             :   None
+    """
+
+    sentences = dissect.get_sentences(maintext)
     #print("------", sentences, '\n')
 
     S = text_rank.get_similarity_matrix(sentences)
@@ -24,6 +35,14 @@ def summarize(mainText):
 
 
 def perform_textrank(textArray):
+    """
+        performs textrank on the entire data
+
+        :param textArray                :   Data read from data.csv(all documents data)
+
+        :return single_labels_list      :   All the labels list of {0, 1}
+        :return summarized_list         :   List of extracted summaries
+    """
 
     for s in textArray:
         summarize(s)
