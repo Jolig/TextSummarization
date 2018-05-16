@@ -28,10 +28,10 @@ Steps to run the Project:
       - wordscoring/main.py
 
     - Else(when results are not satisfactory)
-      - We have to constantly monitor and keep on adding training data to train.csv with updated labels and train the
+     - We have to constantly monitor and keep on adding training data to train.csv with updated labels and train the
            model again and again.
 
-      - For this use wordscoring/regression.py
+     - For this use wordscoring/regression.py
 
         - i.e follow the below steps:
             - Run the algorithm(regression.py) to predict for sentences in predict.csv.
@@ -40,8 +40,8 @@ Steps to run the Project:
             - Add some more samples to train.csv with expected labels.
             - Repeat all thses sub-steps until the results of predict.csv are satisfactory
 
-      - After few iterations our train.csv would be very efficient so that it can be used to create a linear regression model that predicts with more accuracy.
+     - After few iterations our train.csv would be very efficient so that it can be used to create a linear regression model that predicts with more accuracy.
 
-        - Whenever new data comes, we can directly run these
+     - Whenever new data comes, we can directly run these
             - helper/preprocessing.py
             - wordscoring/main.py
