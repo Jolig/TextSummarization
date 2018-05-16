@@ -33,7 +33,7 @@ Steps to run the Project:
 
       - For this use wordscoring/regression.py
 
-      - i.e follow the below steps:
+        - i.e follow the below steps:
             - Run the algorithm(regression.py) to predict for sentences in predict.csv.
             - Validate the results manually.
             - Update the labels of the existing samples of train.csv.
@@ -42,6 +42,6 @@ Steps to run the Project:
 
       - After few iterations our train.csv would be very efficient so that it can be used to create a linear regression model that predicts with more accuracy.
 
-      - Whenever new data comes, we can directly run these
+        - Whenever new data comes, we can directly run these
             - helper/preprocessing.py
             - wordscoring/main.py
